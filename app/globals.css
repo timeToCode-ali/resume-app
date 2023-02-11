@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	h1 {
+		@apply text-yellow text-4xl sm:text-6xl;
+	}
+	h2 {
+		@apply text-white text-2xl;
+	}
+	h4 {
+		@apply text-base;
+	}
+	p {
+		@apply text-base;
+	}
+}
+
+@layer base {
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-family: Oswald, Proxima Nova, system-ui, sans-serif;
+	}
+	html {
+		font-family: Merriweather, Proxima Nova, system-ui, sans-serif;
+	}
+}
+
+.icons_contactme {
+	@apply text-2xl text-white m-2;
+}
+
+main h2 {
+	@apply uppercase text-black;
+}
+
+.btn {
+	@apply w-1/2 h-12 py-2 px-4 text-black font-display  uppercase text-xl;
+}
+
+.skill {
+	@apply text-lg py-2 px-4 font-light w-fit m-2 bg-green-light rounded-md;
+}
+
+section {
+	@apply mb-10;
+}
