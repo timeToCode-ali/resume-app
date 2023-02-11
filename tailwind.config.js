@@ -12,7 +12,7 @@ module.exports = {
 			yellow: "#FFF734",
 			green: "#68F590",
 			grey: "#F3F3F3",
-			"grey-light": "#F0F0F0",
+			"grey-light": "#FAFAFA",
 			"green-light": "#d2eff1",
 			white: "#fff",
 		},
@@ -42,11 +42,6 @@ module.exports = {
 			},
 			flexBasis: {
 				"4/5": "66%",
-				"2/7": "28.5714286%",
-				"3/7": "42.8571429%",
-				"4/7": "57.1428571%",
-				"5/7": "71.4285714%",
-				"6/7": "85.7142857%",
 			},
 		},
 		screens: {

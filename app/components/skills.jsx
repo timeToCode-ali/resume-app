@@ -13,7 +13,7 @@ const Skills = ({ skills }) => {
 			{["soft", "hard"].map((el, i) => (
 				<button
 					key={el + "_" + i}
-					className={`btn ${setBg(el)} ${setTabsAlignment(el)}`}
+					className={`btn ${setBg(el)} ${setTabsAlignment(el)} `}
 					onClick={() => setActiveTab(el)}
 				>
 					{el} Skills
