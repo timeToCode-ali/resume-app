@@ -1,12 +1,10 @@
 import React from "react";
-//import { LinkIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
 import Image from "next/image";
 
 import { Linkedin, Envelope, Twitter, Medium } from "./icons/";
 
 const Sidebar = ({ data }) => {
 	const { name, role, education, contactLinks } = data;
-	//factory function that creates the components based on the string passed to it.
 
 	return (
 		<div className='h-screen bg-black w-full  flex flex-col content-between sm:justify-around sm:w-1/3  sm:fixed '>
@@ -18,6 +16,7 @@ const Sidebar = ({ data }) => {
 					className='rounded-full mb-6 h-full'
 					src='/images/julian-wan-WNoLnJo7tS8-unsplash.jpg'
 					alt='julian-wan-WNoLnJo7tS8-unsplash'
+					aria-label='image of julian-wan-WNoLnJo7tS8-unsplash'
 				/>
 
 				<h1 className='mb-2'>{name}</h1>
@@ -29,16 +28,16 @@ const Sidebar = ({ data }) => {
 						CONTACT ME
 					</h4>
 					<div className='flex justify-center  gap-1'>
-						<a href={contactLinks?.[0]}>
+						<a aria-label='Email link' href={contactLinks?.[0]}>
 							<Envelope className='icons_contactme' />
 						</a>
-						<a href={contactLinks?.[1]}>
+						<a aria-label='Twitter link' href={contactLinks?.[1]}>
 							<Twitter className='icons_contactme' />
 						</a>
-						<a href={contactLinks?.[2]}>
+						<a aria-label='Linkedin link' href={contactLinks?.[2]}>
 							<Linkedin className='icons_contactme' />
 						</a>
-						<a href={contactLinks?.[3]}>
+						<a aria-label='Medium link' href={contactLinks?.[3]}>
 							<Medium className='icons_contactme' />
 						</a>
 					</div>
