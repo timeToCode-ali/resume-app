@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProfessionaExperience = ({ data }) => {
+const ProfessionalExperience = ({ data }) => {
 	const { title, experiences } = data;
 	return (
 		<section>
@@ -20,4 +20,4 @@ const ProfessionaExperience = ({ data }) => {
 	);
 };
 
-export default ProfessionaExperience;
+export default ProfessionalExperience;
