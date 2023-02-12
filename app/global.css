@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	h1 {
+		@apply text-yellow text-4xl sm:text-6xl;
+	}
+	h2 {
+		@apply text-2xl;
+	}
+	h3 {
+		@apply text-lg;
+	}
+	h4 {
+		@apply text-base;
+	}
+	p {
+		@apply text-base;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		@apply font-display;
+	}
+	html {
+		font-family: Merriweather;
+	}
+}
+
+.icons-contactme {
+	@apply text-2xl m-2;
+}
+
+section {
+	@apply mb-10;
+}
+
+main h2 {
+	@apply uppercase text-black;
+}
+
+.btn {
+	@apply w-1/2 h-12 text-black font-display uppercase text-xl px-4 transition ease-in-out hover:text-yellow hover:bg-black duration-200;
+}
+
+.skill {
+	@apply bg-green-light text-lg py-2 px-4 w-fit rounded-md;
+}
