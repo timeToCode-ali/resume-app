@@ -3,11 +3,7 @@ import "./global.css";
 import Sidebar from "./component/sidebar";
 import { personalData } from "../data/page-data";
 
-export default function RootLayout({
-	children,
-}: {
-	children: React.ReactNode;
-}) {
+export default function RootLayout({ children }) {
 	return (
 		<html>
 			<head />
