@@ -1,9 +1,17 @@
 import Image from "next/image";
 import React from "react";
 
-import { Envelope, Twitter, Linkedin, Medium } from "./icons/";
+import { Envelope, Twitter, Linkedin, Medium } from "./icons";
 
-const Sidebar = ({ data }) => {
+type SidebarProps = {
+	data: {
+		name: string;
+		role: string;
+		education: string[];
+		contactLinks: string[];
+	};
+};
+const Sidebar = ({ data }: SidebarProps) => {
 	const { name, role, education, contactLinks } = data;
 
 	return (

@@ -1,6 +1,17 @@
 import React from "react";
 
-const ProfessionalExperience = ({ data }) => {
+type ProfessionalExperienceProps = {
+	data: {
+		title: string;
+		experiences: {
+			role: string;
+			description: string;
+			current: boolean;
+		}[];
+	};
+};
+
+const ProfessionalExperience = ({ data }: ProfessionalExperienceProps) => {
 	const { title, experiences } = data;
 	return (
 		<section>

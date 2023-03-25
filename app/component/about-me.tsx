@@ -1,7 +1,16 @@
-import React, { useId } from "react";
+import { useId } from "react";
+import type { SkillsProps } from "./skills";
 import Skills from "./skills";
 
-const AboutMe = ({ data, skills }) => {
+type AboutMeProps = {
+	data: {
+		title: string;
+		body: string[];
+	};
+	skills: SkillsProps["data"];
+};
+
+const AboutMe = ({ data, skills }: AboutMeProps) => {
 	const { title, body } = data;
 	const id = useId();
 	return (

@@ -3,7 +3,7 @@ import AboutMe from "./component/about-me";
 import { aboutMe, skills, professionalData } from "../data/page-data";
 import ProfessionalExperience from "./component/professional-experience";
 
-const page = () => {
+const Page: React.FC = () => {
 	return (
 		<div>
 			<AboutMe data={aboutMe} skills={skills} />
@@ -12,4 +12,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default Page;
