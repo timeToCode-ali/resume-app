@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-export type SkillsProps = {
+type SkillsProps1 = {
 	data: {
 		soft: {
 			icon: string;
@@ -14,19 +14,40 @@ export type SkillsProps = {
 	};
 };
 
-type TabTypeProps = "soft" | "hard";
-// Define the type for the tabs
-// includes the possible values for the tabs ("soft" and "hard"). Then, I used this type as a generic parameter for the useState function to specify the type of the activeTab state variable.
+type Skills = {
+	icon: string;
+	text: string;
+};
+
+type SkillsProps2 = {
+	data: {
+		soft: Skills[];
+		hard: Skills[];
+	};
+};
+
+type SkillCategory = "soft" | "hard";
+// Define the type for the tabs as well
+// includes the possible values for the skills ("soft" and "hard")
+
+export type SkillsProps = {
+	data: {
+		[K in SkillCategory]: {
+			icon: string;
+			text: string;
+		}[];
+	};
+};
 
 const Skills = ({ data }: SkillsProps) => {
-	const [activeTab, setActiveTab] = useState<TabTypeProps>("soft");
+	const [activeTab, setActiveTab] = useState<SkillCategory>("soft");
 
-	const setBg = (active: TabTypeProps) =>
+	const setBg = (active: SkillCategory) =>
 		activeTab === active ? "bg-yellow" : "bg-grey";
-	const setTabsAlignment = (tab: TabTypeProps) =>
+	const setTabsAlignment = (tab: SkillCategory) =>
 		tab === "soft" ? "text-left" : "text-right";
 
-	const tabsType: TabTypeProps[] = ["soft", "hard"];
+	const tabsType: SkillCategory[] = ["soft", "hard"];
 
 	const tabs = (
 		<div className='flex'>
